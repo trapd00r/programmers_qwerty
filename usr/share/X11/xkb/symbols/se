@@ -1,0 +1,148 @@
+// vim: set ft=xkb colorcolumn=0 tw=0 sw=2 et:
+//
+//        Name: Programmer's qwerty
+//      Author: Magnus Woldrich <m@japh.se>
+// Description: This layout makes characters often used in programming, Vim and
+//              the shell more accessible. All of these characters can be typed
+//              with zero modifiers:
+//
+//              ! ' # $ % & / ( ) = ? ` {} | : ;
+//
+// . can be accessed with <Shift-:>
+// , can be accessed with <shift-,> or <ISO_Level3_Shift-j>
+// ; can be accessed with <,>       or <ISO_Level3_Shift-k>
+// ' can be accessed with <2>       or <ISO_Level3_Shift-1> or <'> or <ISO_Level3_Shift-2>
+// " can be accessed with <ISO_Level3_Shift-2
+// Numbers can be accessed with <shift-#>
+//
+// All dead keys are replaced with the (if appropriate) non-dead character
+//
+// TODO
+// consider making ^ non-shifted. I use it way more than ~, and $ (EOL) is
+// already unshifted.
+//
+// make <TLDE> do something more useful
+//
+// find out why mapping shift-backspace doesn't work:
+// key <BKSP> { [ BackSpace, BackSpace, Delete, BackSpace ] };
+
+default partial alphanumeric_keys modifier_keys
+
+xkb_symbols "progqwerty" {
+  key <AE01> { [ exclam,      1,    apostrophe, apostrophe ] };
+  key <AE02> { [ apostrophe,  2,    quotedbl,   apostrophe ] };
+  key <AE03> { [ numbersign,  3,    sterling ] };
+  key <AE04> { [ dollar,      4,    dollar ] };
+  key <AE05> { [ percent,     5,    EuroSign,  cent ] };
+  key <AE06> { [ ampersand,   6,    yen ] };
+  key <AE07> { [ slash,       7,    braceleft ] };
+  key <AE08> { [ parenleft,   8,    bracketleft ] };
+  key <AE09> { [ parenright,  9,    bracketright ] };
+  key <AE10> { [ equal,       0,    braceright ] };
+  key <AE11> { [ question,    plus, backslash ] };
+  key <AE12> { [ grave,       at  ] };
+  key <BKSL> { [ apostrophe,  asterisk] };
+  // TODO make this key more useful.
+  key <TLDE> { [ less,        greater  ] };
+
+  key <AD01> { [ q,           Q ] };
+  key <AD02> { [ w,           W ] };
+  key <AD03> { [ e,           E,           eacute,       Eacute ] };
+  key <AD04> { [ r,           R ] };
+  key <AD05> { [ t,           T ] };
+  key <AD06> { [ y,           Y ] };
+  key <AD07> { [ u,           U ] };
+  key <AD08> { [ i,           I ] };
+  key <AD09> { [ o,           O ] };
+  key <AD10> { [ p,           P ] };
+  key <AD11> { [ braceright,  bracketright ] };
+  key <AD12> { [ asciitilde,  asciicircum, asciicircum,  circumflex] };
+
+  key <AC01> { [ a,          A ] };
+  key <AC02> { [ s,          S ] };
+  key <AC03> { [ d,          D,            eth,          ETH ] };
+  key <AC04> { [ f,          F ] };
+  key <AC05> { [ g,          G ] };
+  key <AC06> { [ h,          H ] };
+  key <AC07> { [ j,          J,            comma ] };
+  key <AC08> { [ k,          K,            semicolon ] };
+  key <AC09> { [ l,          L ] };
+  key <AC10> { [ bar,        backslash ] };
+  key <AC11> { [ braceleft,  bracketleft ] };
+
+  key <AB01> { [ z,          Z,            guillemotleft ] };
+  key <AB02> { [ x,          X,            guillemotright ] };
+  key <AB03> { [ c,          C,            copyright ] };
+  key <AB04> { [ v,          V ] };
+  key <AB05> { [ b,          B ] };
+  key <AB06> { [ n,          N ] };
+  key <AB07> { [ m,          M,            mu ] };
+  key <AB08> { [ semicolon, comma ] };
+  key <AB09> { [ colon, period ] };
+  key <AB10> { [ minus, underscore ] };
+
+  key <LWIN> { [ Super_L ] };
+  key <RWIN> { [ Meta_R ] };
+  key <RALT> { [ ISO_Level3_Shift ] };
+
+  key <CAPS> { [ Escape ] };
+
+  //key <RALT> { [ Meta_R ] };
+  //key <RWIN> { [ ISO_Level3_Shift ] };
+
+  modifier_map Mod1 { Meta_L, Meta_R };
+  modifier_map Mod4 { Super_L };
+  modifier_map Mod5 { ISO_Level3_Shift };
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "se" {
+  include "latin(type2)"
+  include "latin(type2_nodeadkeys)"
+  include "se(se)"
+
+  key <AE04> { [ 4, dollar ] };
+  key <AE05> { [ 5, percent, EuroSign, cent ] };
+  key <AE11> { [ plus, question, backslash ] };
+  key <AE12> { [ grave, at, dead_acute, dead_grave ] };
+  key <BKSL> { [ apostrophe, asterisk ] };
+  key <TLDE> { [ less, greater ] };
+
+  key <AD03> { [ e, E, eacute, Eacute ] };
+  key <AD07> { [ u, U, udiaeresis, Udiaeresis ] };
+  key <AD11> { [ aring, Aring, braceright, bracketright ] };
+  key <AD12> { [ asciitilde, asciicircum, dead_diaeresis, dead_circumflex] };
+
+  key <AC10> { [ odiaeresis, Odiaeresis, bar, backslash ] };
+  key <AC11> { [ adiaeresis, Adiaeresis, braceleft, bracketleft ] };
+
+  key <AB06> { [ n, N, ntilde, Ntilde ] };
+
+  key <LWIN> { [ Super_L ] };
+  key <LALT> { [ LALT ] };
+  //key <LALT> { [ Meta_L ] };
+  key <RWIN> { [ Meta_R ] };
+  key <RALT> { [ ISO_Level3_Shift ] };
+
+  modifier_map Mod1 { Meta_L, Meta_R };
+  modifier_map Mod4 { Super_L };
+  modifier_map Mod5 { ISO_Level3_Shift };
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "us" {
+  include "us"
+
+  key <AD11> { [ bracketleft, braceleft, adiaeresis, Adiaeresis ] };
+  key <AD12> { [ bracketright, braceright, aring, Aring ] };
+  key <BKSL> { [ backslash, bar, odiaeresis, Odiaeresis ] };
+
+  key <LWIN> { [ Super_L ] };
+  key <LALT> { [ LALT ] };
+  key <RWIN> { [ Meta_R ] };
+  key <RALT> { [ ISO_Level3_Shift ] };
+
+  modifier_map Mod1 { Meta_L, Meta_R };
+  modifier_map Mod4 { Super_L };
+  modifier_map Mod5 { ISO_Level3_Shift };
+};

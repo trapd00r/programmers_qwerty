@@ -1,0 +1,4 @@
+#!/bin/sh
+vim ./usr/share/X11/xkb/symbols/se \
+  && su -c 'cp -v usr/share/X11/xkb/symbols/se /usr/share/X11/xkb/symbols/se' \
+  && setxkbmap se -variant progqwerty

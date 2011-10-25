@@ -1,0 +1,55 @@
+=pod
+
+=head1 Programmer's qwerty
+
+=head1 DESCRIPTION
+
+This layout makes characters often used in programming, Vim and the shell more
+accessible.
+
+=head1 BUT WHY
+
+All of these characters can be typed with zero modifiers:
+
+  ! ' # $ % & / ( ) = ? ` {} | : ;
+
+Additionally,
+
+. can be accessed with B<Shift-:>
+
+, can be accessed with B<shift-,> or B<ISO_Level3_Shift-j>
+
+; can be accessed with B<,>       or B<ISO_Level3_Shift-k>
+
+' can be accessed with B<2>       or B<ISO_Level3_Shift-1> or B<'> or B<ISO_Level3_Shift-2>
+
+" can be accessed with B<ISO_Level3_Shift-2>
+
+Numbers can be accessed with B<Shift-#>
+
+All dead keys are replaced with the (if appropriate) non-dead character
+
+=head1 TODO
+
+=head2 BackSpace
+
+Mapping Shift-Backspace doesn't work:
+
+  key <BKSP> { [ BackSpace, BackSpace, Delete, BackSpace ] };
+
+On my system, only the non-shifted BackSpace works, as can be illustrated with:
+
+  key <BKSP> { [ a, b, c, d] };
+
+I'm not the only one having problems: L<http://www.mail-archive.com/misc@openbsd.org/msg79013.html>
+
+=head2 ^
+
+Consider making ^ non-shifted. I use it way more than ~, and $ (EOL) is
+already unshifted.
+
+=head2 <TLDE>
+
+We should be able to make B<TLDE> do something useful.
+
+=cut
