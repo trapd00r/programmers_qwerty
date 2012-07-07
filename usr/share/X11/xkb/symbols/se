@@ -30,7 +30,7 @@ default partial alphanumeric_keys modifier_keys
 
 xkb_symbols "progqwerty" {
   key <AE01> { [ exclam,      1,    asterisk, apostrophe ] };
-  key <AE02> { [ apostrophe,  2,    quotedbl,   apostrophe ] };
+  key <AE02> { [ apostrophe,  2,    quotedbl, apostrophe ] };
   key <AE03> { [ numbersign,  3,    sterling ] };
   key <AE04> { [ dollar,      4,    dollar ] };
   key <AE05> { [ percent,     5,    EuroSign,  cent ] };
@@ -39,14 +39,15 @@ xkb_symbols "progqwerty" {
   key <AE08> { [ parenleft,   8,    bracketleft ] };
   key <AE09> { [ parenright,  9,    bracketright ] };
   key <AE10> { [ equal,       0,    braceright ] };
-  key <AE11> { [ question,    plus, backslash ] };
+  key <AE11> { [ question,    plus, backslash,              Ub0 ] }; // DEGREE SIGN [°]
   key <AE12> { [ grave,       at  ] };
   key <BKSL> { [ apostrophe,  asterisk] };
   // TODO make this key more useful.
+  //key <TLDE> { [ ISO_Level3_Shift ] };
   key <TLDE> { [ less,        greater  ] };
 
-  key <AD01> { [ q,           Q ] };
-  key <AD02> { [ w,           W ] };
+  key <AD01> { [ q,           Q,  Uff51] };
+  key <AD02> { [ w,           W,  Uff57 ] };
   key <AD03> { [ e,           E,           eacute,       Eacute ] };
   key <AD04> { [ r,           R ] };
   key <AD05> { [ t,           T ] };
@@ -55,7 +56,7 @@ xkb_symbols "progqwerty" {
   key <AD08> { [ i,           I ] };
   key <AD09> { [ o,           O ] };
   key <AD10> { [ p,           P ] };
-  key <AD11> { [ braceright,  bracketright ] };
+  key <AD11> { [ colon,  bracketright ] };
   key <AD12> { [ asciitilde,  asciicircum, asciicircum,  circumflex] };
 
   key <AC01> { [ a,          A ] };
@@ -67,8 +68,8 @@ xkb_symbols "progqwerty" {
   key <AC07> { [ j,          J,            comma ] };
   key <AC08> { [ k,          K,            semicolon ] };
   key <AC09> { [ l,          L ] };
-  key <AC10> { [ bar,        backslash ] };
-  key <AC11> { [ braceleft,  bracketleft ] };
+  key <AC10> { [ colon, bar,        backslash ] };
+  key <AC11> { [ colon,  bracketleft ] };
 
   key <AB01> { [ z,          Z,            guillemotleft ] };
   key <AB02> { [ x,          X,            guillemotright ] };
@@ -77,21 +78,22 @@ xkb_symbols "progqwerty" {
   key <AB05> { [ b,          B ] };
   key <AB06> { [ n,          N ] };
   key <AB07> { [ m,          M,            mu ] };
-  key <AB08> { [ semicolon, comma ] };
-  key <AB09> { [ colon, period ] };
+  key <AB08> { [ comma, semicolon ] };
+  key <AB09> { [ period, colon ] };
   key <AB10> { [ minus, underscore ] };
 
-  key <LWIN> { [ Super_L ] };
+  key <LWIN> { [ Ctrl ] };
   key <RWIN> { [ Meta_R ] };
   key <RALT> { [ ISO_Level3_Shift ] };
 
   key <CAPS> { [ Escape ] };
+  key <SPCE> { [ Space, Space, Escape ] };
 
   //key <RALT> { [ Meta_R ] };
   //key <RWIN> { [ ISO_Level3_Shift ] };
 
   modifier_map Mod1 { Meta_L, Meta_R };
-  modifier_map Mod4 { Super_L };
+  modifier_map Mod4 { Ctrl };
   modifier_map Mod5 { ISO_Level3_Shift };
 };
 
@@ -118,14 +120,15 @@ xkb_symbols "se" {
 
   key <AB06> { [ n, N, ntilde, Ntilde ] };
 
-  key <LWIN> { [ Super_L ] };
+  key <LWIN> { [ Ctrl ] };
   key <LALT> { [ LALT ] };
   //key <LALT> { [ Meta_L ] };
   key <RWIN> { [ Meta_R ] };
   key <RALT> { [ ISO_Level3_Shift ] };
 
   modifier_map Mod1 { Meta_L, Meta_R };
-  modifier_map Mod4 { Super_L };
+  //modifier_map Mod4 { Super_L };
+  modifier_map Mod4 { Ctrl };
   modifier_map Mod5 { ISO_Level3_Shift };
 };
 
@@ -137,12 +140,12 @@ xkb_symbols "us" {
   key <AD12> { [ bracketright, braceright, aring, Aring ] };
   key <BKSL> { [ backslash, bar, odiaeresis, Odiaeresis ] };
 
-  key <LWIN> { [ Super_L ] };
+  key <LWIN> { [ Ctrl ] };
   key <LALT> { [ LALT ] };
   key <RWIN> { [ Meta_R ] };
   key <RALT> { [ ISO_Level3_Shift ] };
 
   modifier_map Mod1 { Meta_L, Meta_R };
-  modifier_map Mod4 { Super_L };
+  modifier_map Mod4 { Ctrl };
   modifier_map Mod5 { ISO_Level3_Shift };
 };
