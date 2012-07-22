@@ -44,12 +44,17 @@ xkb_symbols "progqwerty" {
   key <BKSL> { [ apostrophe,  asterisk] };
   // TODO make this key more useful.
   //key <TLDE> { [ ISO_Level3_Shift ] };
-  key <TLDE> { [ less,        greater  ] };
+  key <TLDE> {[ less,        greater ]};
 
-  key <AD01> { [ q,           Q,  Uff51] };
-  key <AD02> { [ w,           W,  Uff57 ] };
-  key <AD03> { [ e,           E,           eacute,       Eacute ] };
-  key <AD04> { [ r,           R ] };
+  //                              ♫ BEAMED EIGHTH NOTES    ♬ BEAMED SIXTEENTH NOTES
+  key <AD01> {[ q,           Q,  U266b,                   U266C ]};
+  //                              ↑ UPWARDS ARROW          ∧ LOGICAL AND
+  key <AD02> {[ w,           W,  U2191,                   U2227 ]};
+  //                              ♡ WHITE HEART SUIT       ♥ BLACK HEART SUIT
+  key <AD03> {[ e,           E,  U2661,                   U2665 ]};
+  //                              ⚐ WHITE FLAG             ⚑ BLACK FLAG
+  key <AD04> {[ r,           R,  U2690,                   U2691 ]};
+
   key <AD05> { [ t,           T ] };
   key <AD06> { [ y,           Y ] };
   key <AD07> { [ u,           U ] };
