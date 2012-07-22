@@ -42,7 +42,8 @@ xkb_symbols "progqwerty" {
   key <AE09> {[ parenright,  9,    bracketright,         U27E9 ]};
 
   key <AE10> { [ equal,       0,    braceright ] };
-  key <AE11> { [ question,    plus, backslash,              Ub0 ] }; // DEGREE SIGN [°]
+  //                                                     ° DEGREE SIGN
+  key <AE11> {[ question,    plus, backslash,            U00b0 ]};
   key <AE12> { [ grave,       at  ] };
   key <BKSL> { [ apostrophe,  asterisk] };
   // TODO make this key more useful.
