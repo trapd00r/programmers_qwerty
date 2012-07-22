@@ -36,8 +36,11 @@ xkb_symbols "progqwerty" {
   key <AE05> { [ percent,     5,    EuroSign,  cent ] };
   key <AE06> { [ ampersand,   6,    yen ] };
   key <AE07> { [ slash,       7,    braceleft ] };
-  key <AE08> { [ parenleft,   8,    bracketleft ] };
-  key <AE09> { [ parenright,  9,    bracketright ] };
+  //                                                      ⟨ MATHEMATICAL LEFT ANGLE BRACKET
+  key <AE08> {[ parenleft,   8,    bracketleft,          U27E8 ]};
+  //                                                      ⟩ MATHEMATICAL RIGHT ANGLE BRACKET 
+  key <AE09> {[ parenright,  9,    bracketright,         U27E9 ]};
+
   key <AE10> { [ equal,       0,    braceright ] };
   key <AE11> { [ question,    plus, backslash,              Ub0 ] }; // DEGREE SIGN [°]
   key <AE12> { [ grave,       at  ] };
