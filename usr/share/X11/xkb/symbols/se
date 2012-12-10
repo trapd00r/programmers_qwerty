@@ -27,28 +27,30 @@
 // key <BKSP> { [ BackSpace, BackSpace, Delete, BackSpace ] };
 
 default partial alphanumeric_keys modifier_keys
-
 xkb_symbols "progqwerty" {
-  key <AE01> { [ exclam,      1,    asterisk, apostrophe ] };
-  key <AE02> { [ apostrophe,  2,    quotedbl, apostrophe ] };
-  key <AE03> { [ numbersign,  3,    sterling ] };
-  key <AE04> { [ dollar,      4,    dollar ] };
-  key <AE05> { [ percent,     5,    EuroSign,  cent ] };
-  key <AE06> { [ ampersand,   6,    yen ] };
-  key <AE07> { [ slash,       7,    braceleft ] };
-  //                                                      ⟨ MATHEMATICAL LEFT ANGLE BRACKET
-  key <AE08> {[ parenleft,   8,    bracketleft,          U27E8 ]};
-  //                                                      ⟩ MATHEMATICAL RIGHT ANGLE BRACKET 
-  key <AE09> {[ parenright,  9,    bracketright,         U27E9 ]};
+  key <Menu> { [ U267F, U269A ]}; // ♿ ⚚ *
+  key <AE01> { [exclam, 1, asterisk, apostrophe] };
 
-  key <AE10> { [ equal,       0,    braceright ] };
+  key <AE02> { [ apostrophe,  2,    quotedbl, asterisk] };
+  key <AE03> { [ numbersign,  3,    sterling ]};
+  key <AE04> { [ dollar,      4,    dollar ] };
+  key <AE05> { [ percent,     5,    EuroSign,  tilde ]};
+  key <AE06> { [ ampersand,   6,    asciicircum ] };
+//                                                       ⸢ TOP LEFT HALF BRACKET ] };
+  key <AE07> { [ slash,       7,    braceleft,           U2E22 ]};
+  //                                                     ⌜ TOP LEFT CORNER
+  key <AE08> {[ parenleft,   8,    bracketleft,          U231c ]};
+  //                                                     ⌝ TOP RIGHT CORNER
+  key <AE09> {[ parenright,  9,    bracketright,         U231d ]};
+  //                                                     ⸣ TOP RIGHT HALF BRACKET
+  key <AE10> { [ equal,      0,    braceright,           U2e23 ]};
   //                                                     ° DEGREE SIGN
   key <AE11> {[ question,    plus, backslash,            U00b0 ]};
   key <AE12> { [ grave,       at  ] };
   key <BKSL> { [ apostrophe,  asterisk] };
   // TODO make this key more useful.
-  //key <TLDE> { [ ISO_Level3_Shift ] };
-  key <TLDE> {[ less,        greater ]};
+  key <TLDE> { [ ISO_Level3_Shift ] };
+  //key <TLDE> {[ less,        greater ]};
 
   //                              ♫ BEAMED EIGHTH NOTES    ♬ BEAMED SIXTEENTH NOTES
   key <AD01> {[ q,           Q,  U266b,                   U266C ]};
@@ -70,8 +72,8 @@ xkb_symbols "progqwerty" {
 
   key <AC01> { [ a,          A ] };
   key <AC02> { [ s,          S ] };
-  key <AC03> { [ d,          D,            eth,          ETH ] };
-  key <AC04> { [ f,          F ] };
+  key <AC03> { [ d,          D,            U26a0,          U2698 ]};
+  key <AC04> { [ f,          F, U2698 ] };
   key <AC05> { [ g,          G ] };
   key <AC06> { [ h,          H ] };
   key <AC07> { [ j,          J,            comma ] };
@@ -81,7 +83,7 @@ xkb_symbols "progqwerty" {
   key <AC11> { [ colon,  bracketleft ] };
 
   key <AB01> { [ z,          Z,            guillemotleft ] };
-  key <AB02> { [ x,          X,            guillemotright ] };
+  key <AB02> { [ x,          X,           guillemotright ] };
   key <AB03> { [ c,          C,            copyright ] };
   key <AB04> { [ v,          V ] };
   key <AB05> { [ b,          B ] };
@@ -95,8 +97,8 @@ xkb_symbols "progqwerty" {
   key <RWIN> { [ Meta_R ] };
   key <RALT> { [ ISO_Level3_Shift ] };
 
-  key <CAPS> { [ Escape ] };
-  key <SPCE> { [ Space, Space, Escape ] };
+  key <CAPS> { [ Escape, Tab, Ctrl ] };
+  key <SPCE> { [ Space, Tab, Escape ] };
 
   //key <RALT> { [ Meta_R ] };
   //key <RWIN> { [ ISO_Level3_Shift ] };
@@ -141,20 +143,20 @@ xkb_symbols "se" {
   modifier_map Mod5 { ISO_Level3_Shift };
 };
 
-partial alphanumeric_keys modifier_keys
-xkb_symbols "us" {
-  include "us"
-
-  key <AD11> { [ bracketleft, braceleft, adiaeresis, Adiaeresis ] };
-  key <AD12> { [ bracketright, braceright, aring, Aring ] };
-  key <BKSL> { [ backslash, bar, odiaeresis, Odiaeresis ] };
-
-  key <LWIN> { [ Ctrl ] };
-  key <LALT> { [ LALT ] };
-  key <RWIN> { [ Meta_R ] };
-  key <RALT> { [ ISO_Level3_Shift ] };
-
-  modifier_map Mod1 { Meta_L, Meta_R };
-  modifier_map Mod4 { Ctrl };
-  modifier_map Mod5 { ISO_Level3_Shift };
-};
+ partial alphanumeric_keys modifier_keys
+ xkb_symbols "us" {
+   include "us"
+ 
+   key <AD11> { [ bracketleft, braceleft, adiaeresis, Adiaeresis ] };
+   key <AD12> { [ bracketright, braceright, aring, Aring ] };
+   key <BKSL> { [ backslash, bar, odiaeresis, Odiaeresis ] };
+ 
+   key <LWIN> { [ Ctrl ] };
+   key <LALT> { [ LALT ] };
+   key <RWIN> { [ Meta_R ] };
+   key <RALT> { [ ISO_Level3_Shift ] };
+ 
+   modifier_map Mod1 { Meta_L, Meta_R };
+   modifier_map Mod4 { Ctrl };
+   modifier_map Mod5 { ISO_Level3_Shift };
+ };
