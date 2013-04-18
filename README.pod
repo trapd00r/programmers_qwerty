@@ -2,9 +2,11 @@
 
 =head1 Programmer's qwerty
 
+or "there was no time for dvorak"
+
 =head1 DESCRIPTION
 
-This layout makes characters often used in programming, Vim and the shell more
+This layout makes characters that I frequent in my vims and my shells more
 accessible.
 
 =head1 BUT WHY
@@ -28,6 +30,10 @@ Additionally,
 Numbers can be accessed with B<Shift-#>
 
 All dead keys are replaced with the (if appropriate) non-dead character
+
+More or less commonly used unicode characters can be accessed with B<ISO_Level3-X>;
+
+  ♫ ♬ ↑ ∧ ♡ ♥ ° ⸣ ¹ ⌜ ⌝ 
 
 =head1 TODO
 
