@@ -31,10 +31,14 @@ xkb_symbols "progqwerty" {
   key <Menu> { [ U267F, U269A ]}; // ♿ ⚚ *
   key <AE01> { [exclam, 1, asterisk, apostrophe] };
 
-  key <AE02> { [ apostrophe,  2,    quotedbl, asterisk] };
-  key <AE03> { [ numbersign,  3,    sterling ]};
-  key <AE04> { [ dollar,      4,    dollar ] };
-  key <AE05> { [ percent,     5,    EuroSign,  tilde ]};
+  //                                        ¥
+  key <AE02> { [ apostrophe,  2, quotedbl, U0065] };
+  //                                        §
+  key <AE03> { [ numbersign,  3, sterling, U00A7] };
+  //                                        ò
+  key <AE04> { [ dollar,      4,    dollar, U00F2 ] };
+  //                                 è      É
+  key <AE05> { [ percent,     5,    U00E8,  U00C9 ]};
   key <AE06> { [ ampersand,   6,    asciicircum ] };
 //                                                       ⸢ TOP LEFT HALF BRACKET ] };
   key <AE07> { [ slash,       7,    braceleft,           U2E22 ]};
@@ -60,10 +64,13 @@ xkb_symbols "progqwerty" {
   key <AD03> {[ e,           E,  U2661,                   U2665 ]};
   //                              ⚐ WHITE FLAG             ⚑ BLACK FLAG
   key <AD04> {[ r,           R,  U2690,                   U2691 ]};
+  //                              à                        ê
+  key <AD05> {[ t,           T,  U00E0,                   U00EA ]};
+  //                              Ï                        Â
+  key <AD06> {[ y,           Y,  U00CF,                   U00C2 ]};
+  //                              ë                        í
+  key <AD07> {[ u,           U,  U00EB,                   U00ED ]};
 
-  key <AD05> { [ t,           T ] };
-  key <AD06> { [ y,           Y ] };
-  key <AD07> { [ u,           U ] };
   key <AD08> { [ i,           I ] };
   key <AD09> { [ o,           O ] };
   key <AD10> { [ p,           P ] };
